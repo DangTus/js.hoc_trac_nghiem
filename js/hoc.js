@@ -34,7 +34,3 @@ fetch("../json/200_cau_hoi.json")
             cau_tra_loi_html[i].innerHTML = cau_tra_loi[i];
         }
     });
-
-function ve_trang_chu() {
-    location.href = "../../";
-}
