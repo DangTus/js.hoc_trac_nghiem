@@ -30,7 +30,11 @@ fetch("../json/200_cau_hoi.json")
         //đổ câu hỏi và các câu trả lời ra web
         cau_hoi_html.innerHTML = cau_hoi;
         for (i = 0; i < 4; i++) {
-            abcd_html[i].innerHTML = abcd[i]
+            abcd_html[i].innerHTML = abcd[i];
             cau_tra_loi_html[i].innerHTML = cau_tra_loi[i];
         }
     });
+
+function ve_trang_chu() {
+    location.href = "../";
+}
