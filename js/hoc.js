@@ -36,5 +36,5 @@ fetch("../json/200_cau_hoi.json")
     });
 
 function ve_trang_chu() {
-    location.href = "../../";
+    location.href = "../"
 }
