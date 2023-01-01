@@ -13,28 +13,44 @@ function shuffle(array) {
     return array.sort(() => Math.random() - 0.5);
 }
 
-fetch("../json/200_cau_hoi.json")
-    .then(function (response) {
-        return response.text();
-    })
-    .then(function (data_result) {
-        dataArray = JSON.parse(data_result).data;
+document.getElementsByTagName('body')[0].onload = function () {
+    show_load();
 
-        //xáo trộn câu hỏi
-        dataArrayRand = shuffle(dataArray);
+    fetch("../json/200_cau_hoi.json")
+        .then(function (response) {
+            return response.text();
+        })
+        .then(function (data_result) {
+            dataArray = JSON.parse(data_result).data;
 
-        //lấy câu hỏi và câu trả lời
-        cau_hoi = dataArrayRand[0].cau_hoi;
-        cau_tra_loi = dataArrayRand[0].cau_tra_loi;
+            //xáo trộn câu hỏi
+            dataArrayRand = shuffle(dataArray);
 
-        //đổ câu hỏi và các câu trả lời ra web
-        cau_hoi_html.innerHTML = cau_hoi;
-        for (i = 0; i < 4; i++) {
-            abcd_html[i].innerHTML = abcd[i];
-            cau_tra_loi_html[i].innerHTML = cau_tra_loi[i];
-        }
-    });
+            //lấy câu hỏi và câu trả lời
+            cau_hoi = dataArrayRand[0].cau_hoi;
+            cau_tra_loi = dataArrayRand[0].cau_tra_loi;
+
+            //đổ câu hỏi và các câu trả lời ra web
+            cau_hoi_html.innerHTML = cau_hoi;
+            for (i = 0; i < 4; i++) {
+                abcd_html[i].innerHTML = abcd[i];
+                cau_tra_loi_html[i].innerHTML = cau_tra_loi[i];
+            }
+
+            hide_load();
+        });
+};
+
+function show_load() {
+    load = document.getElementsByClassName("load")[0];
+    load.classList.remove("hidden");
+}
+
+function hide_load() {
+    load = document.getElementsByClassName("load")[0];
+    load.classList.add("hidden");
+}
 
 function ve_trang_chu() {
-    location.href = "../"
+    location.href = "../";
 }
