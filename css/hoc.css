@@ -1,0 +1,30 @@
+#cau_hoi .item,
+#cau_tra_loi .item {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+    padding: 20px 15px;
+}
+
+#cau_tra_loi .item {
+    margin-top: 12px;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+#cau_hoi,
+#cau_tra_loi {
+    text-align: justify;
+}
+
+#cau_hoi {
+    font-size: 20px;
+}
+
+#cau_hoi strong {
+    font-size: 23px;
+}
+
+#cau_tra_loi {
+    font-size: 18px;
+}

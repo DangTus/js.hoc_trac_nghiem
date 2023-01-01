@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../imgs/banner-bg.png");
+    background-repeat: repeat;
+}
+
+#header {
+    width: 100%;
+    height: max-content;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+    padding: 15px 0 15px 0;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+#header h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+}
+
+#main {
+    width: 100%;
+    margin: 50px 0;
+}
+
+#main .item-trang-chu {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+    padding: 20px 15px;
+    cursor: pointer;
+}
+
+.center > * {
+    transform: translate(50%);
+}

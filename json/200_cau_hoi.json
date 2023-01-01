@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "cau_hoi": "Câu nào sau đây không là mệnh đề?",
+      "cau_tra_loi": [
+        "x > 2",
+        "3 < 1",
+        "4 – 5 = 1",
+        "Tam giác đều là tam giác có ba cạnh bằng nhau."
+      ],
+      "dap_an": "x > 2"
+    },
+    {
+      "cau_hoi": "Trong các câu sau, câu nào không phải là mệnh đề?",
+      "cau_tra_loi": [
+        "Buồn ngủ quá!",
+        "Hình thoi có hai đường chéo vuông góc với nhau.",
+        "8 là số chính phương.",
+        "Băng Cốc là thủ đô của Mianma."
+      ],
+      "dap_an": "Buồn ngủ quá!"
+    },
+    {
+      "cau_hoi": "Trong các câu sau, câu nào là mệnh đề?",
+      "cau_tra_loi": [
+        "Đi ngủ đi!",
+        "Trung Quốc là nước đông dân nhất thế giới.",
+        "Bạn học trường nào?",
+        "Không được làm việc riêng trong giờ học."
+      ],
+      "dap_an": "Trung Quốc là nước đông dân nhất thế giới."
+    },
+    {
+      "cau_hoi": "Trong các mệnh đề sau, mệnh đề nào là mệnh đề đúng?",
+      "cau_tra_loi": [
+        "Tổng của hai số tự nhiên là một số chẵn khi và chỉ khi cả hai số đều là số chẵn;",
+        "Tích của hai số tự nhiên là một số chẵn khi và chỉ khi cả hai số đều là số chẵn;",
+        "Tổng của hai số tự nhiên là một số lẻ khi và chỉ khi cả hai số đều là số lẻ;",
+        "Tích của hai số tự nhiên là một số lẻ khi và chỉ khi cả hai số đều là số lẻ."
+      ],
+      "dap_an": "Tích của hai số tự nhiên là một số lẻ khi và chỉ khi cả hai số đều là số lẻ."
+    },
+    {
+      "cau_hoi": "Số tập con của tập A = {1; 2; 3} là",
+      "cau_tra_loi": [
+        "8",
+        "6",
+        "5",
+        "7"
+      ],
+      "dap_an": "8"
+    }
+  ]
+}
