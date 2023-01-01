@@ -1,19 +1,22 @@
-var cau_hoi_html = document
+var noi_dung_cau_hoi_html = document
     .getElementById("cau_hoi")
     .getElementsByTagName("span")[0];
-var cau_tra_loi_html = document
-    .getElementById("cau_tra_loi")
+var noi_dung_dap_an_html = document
+    .getElementById("dap_an")
     .getElementsByTagName("span");
 var abcd_html = document
-    .getElementById("cau_tra_loi")
+    .getElementById("dap_an")
     .getElementsByTagName("strong");
 var abcd = ["A. ", "B. ", "C. ", "D. "];
+var dap_an_da_chon = null
+var dap_an_dung = null
 
 function shuffle(array) {
     return array.sort(() => Math.random() - 0.5);
 }
 
-document.getElementsByTagName('body')[0].onload = function () {
+// sự kiện khi bắt đầu load trang
+document.getElementsByTagName("body")[0].onload = function () {
     show_load();
 
     fetch("../json/200_cau_hoi.json")
@@ -26,20 +29,67 @@ document.getElementsByTagName('body')[0].onload = function () {
             //xáo trộn câu hỏi
             dataArrayRand = shuffle(dataArray);
 
-            //lấy câu hỏi và câu trả lời
+            //lấy nội câu hỏi và câu trả lời
             cau_hoi = dataArrayRand[0].cau_hoi;
-            cau_tra_loi = dataArrayRand[0].cau_tra_loi;
+            dap_an = dataArrayRand[0].dap_an;
+            dap_an_dung = dataArrayRand[0].dap_an_dung;
 
             //đổ câu hỏi và các câu trả lời ra web
-            cau_hoi_html.innerHTML = cau_hoi;
+            noi_dung_cau_hoi_html.innerHTML = cau_hoi;
             for (i = 0; i < 4; i++) {
                 abcd_html[i].innerHTML = abcd[i];
-                cau_tra_loi_html[i].innerHTML = cau_tra_loi[i];
+                noi_dung_dap_an_html[i].innerHTML = dap_an[i];
             }
 
             hide_load();
         });
 };
+
+function click_dap_an(dap_an_da_click) {
+    reset_css_item_dap_an()
+
+    dap_an_da_click_html = document.getElementById("dap_an_" + dap_an_da_click);
+    dap_an_da_click_html.classList.add('item-select')
+
+    dap_an_da_chon = dap_an_da_click
+}
+
+function kiem_tra_dap_an() {
+    if(dap_an_da_chon) {
+        item_dap_an = document.getElementById('dap_an_'+dap_an_da_chon)
+        noi_dung_dap_an = item_dap_an.getElementsByTagName('span')[0].innerText
+        if(noi_dung_dap_an == dap_an_dung) {
+            item_dap_an.classList.add('item-right')
+        } else {
+            item_dap_an.classList.add('item-wrong')
+            show_dap_an_dung()
+        }
+    } else {
+        alert('Vui lòng chọn đáp án')
+    }
+}
+
+function reset_css_item_dap_an() {
+    dap_an_html = document.getElementById("dap_an").getElementsByClassName('item');
+    dap_an_html_len = dap_an_html.length;
+
+    for (i = 0; i < dap_an_html_len; i++) {
+        dap_an_html[i].className = "item"
+    }
+}
+
+function show_dap_an_dung() {
+    dap_an_html = document.getElementById("dap_an").getElementsByClassName('item');
+    dap_an_html_len = dap_an_html.length;
+
+    for (i = 0; i < dap_an_html_len; i++) {
+        noi_dung_dap_an = dap_an_html[i].getElementsByTagName('span')[0].innerText
+
+        if(noi_dung_dap_an == dap_an_dung) {
+            dap_an_html[i].classList.add('item-right')
+        }
+    }
+}
 
 function show_load() {
     load = document.getElementsByClassName("load")[0];
