@@ -81,7 +81,7 @@
     display: none;
 }
 
-#tra_loi {
+.btn {
     width: fit-content;
     padding: 10px 30px;
     margin-top: 50px;
