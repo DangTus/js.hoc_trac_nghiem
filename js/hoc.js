@@ -76,9 +76,13 @@ function kiem_tra_dap_an() {
 
         if (noi_dung_dap_an == dap_an_dung) {
             item_dap_an.classList.add("item-right");
+
+            play_correct_audio();
         } else {
             item_dap_an.classList.add("item-wrong");
             show_dap_an_dung();
+
+            play_wrong_audio();
         }
 
         show_btn_cau_tiep_theo();
@@ -144,6 +148,16 @@ function show_load() {
 function hide_load() {
     load = document.getElementsByClassName("load")[0];
     load.classList.add("hidden");
+}
+
+function play_correct_audio() {
+    audio_correct = document.getElementById("audio_correct");
+    audio_correct.play();
+}
+
+function play_wrong_audio() {
+    audio_wrong = document.getElementById("audio_wrong");
+    audio_wrong.play();
 }
 
 function ve_trang_chu() {
