@@ -1,9 +1,9 @@
 # Web học trắc nghiệm
 - Mô tả dự án: Đây là web giúp bạn học trắc nghiệm
 
-- Cách sử dụng: Thay đổi bộ câu hỏi trong file json/cau_hoi.json theo mẫu bên dưới rồi sau đó chạy web
+- Cách sử dụng: Thay đổi bộ câu hỏi trong file json/bo_cau_hoi.json theo mẫu bên dưới rồi sau đó chạy web
 
-- File json mẫu:
+- File bo_cau_hoi.json mẫu:
 ```
 {
     "data": [
