@@ -3,6 +3,7 @@
 <br>
 - Cách sử dụng: Thay đổi bộ câu hỏi trong file json/cau_hoi.json theo mẫu bên dưới rồi sau đó chạy web
 <br>
+File json mẫu: <br>
 ```
 {
     "data": [
