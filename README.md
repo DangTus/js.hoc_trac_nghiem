@@ -2,7 +2,7 @@
 - Mô tả dự án
 Đây là web giúp bạn học trắc nghiệm
 
-- Cách sử dụng
+- Cách sử dụng <br>
 Bước 1: Thay đổi bộ câu hỏi trong file json/cau_hoi.json theo mẫu dưới
 ```
 {
@@ -31,6 +31,6 @@ Bước 1: Thay đổi bộ câu hỏi trong file json/cau_hoi.json theo mẫu d
 }
 ```
 Bước 2: Chạy app
-
-- Link mẫu
+<br>
+- Link mẫu <br>
 https://dangtus.github.io/js.hoc_trac_nghiem/
