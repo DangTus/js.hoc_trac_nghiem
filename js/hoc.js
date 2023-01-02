@@ -18,7 +18,7 @@ var cau_hoi_hien_tai = -1;
 document.getElementsByTagName("body")[0].onload = function () {
     show_load();
 
-    fetch("../json/200_cau_hoi.json")
+    fetch("../json/bo_cau_hoi.json")
         .then(function (response) {
             return response.text();
         })
