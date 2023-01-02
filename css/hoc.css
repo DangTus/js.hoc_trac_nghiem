@@ -18,7 +18,7 @@
 #cau_hoi .item,
 #dap_an .item {
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 2px solid rgba(0, 0, 0, 0.125);
     border-radius: 5px;
     padding: 20px 15px;
 }
