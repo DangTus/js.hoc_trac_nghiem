@@ -14,6 +14,9 @@ var dap_an_dung = null;
 var bo_cau_hoi = null;
 var cau_hoi_hien_tai = -1;
 
+//trang_thai = 0 là chưa ấn vào nút trả lời, trang_thai = 1 là đã ấn vào nút trả lời
+var trang_thai = 0;
+
 // sự kiện khi bắt đầu load trang
 document.getElementsByTagName("body")[0].onload = function () {
     show_load();
@@ -38,6 +41,7 @@ function show_cau_hoi() {
     show_btn_tra_loi();
 
     cau_hoi_hien_tai += 1;
+    trang_thai = 0;
 
     //kiểm tra xem còn câu hỏi hay không, nếu không còn thì về trang chủ
     if (cau_hoi_hien_tai < bo_cau_hoi.length) {
@@ -61,12 +65,16 @@ function show_cau_hoi() {
 }
 
 function click_dap_an(dap_an_da_click) {
-    reset_css_item_dap_an();
+    if (trang_thai == 0) {
+        reset_css_item_dap_an();
 
-    dap_an_da_click_html = document.getElementById("dap_an_" + dap_an_da_click);
-    dap_an_da_click_html.classList.add("item-select");
+        dap_an_da_click_html = document.getElementById(
+            "dap_an_" + dap_an_da_click
+        );
+        dap_an_da_click_html.classList.add("item-select");
 
-    dap_an_da_chon = dap_an_da_click;
+        dap_an_da_chon = dap_an_da_click;
+    }
 }
 
 function kiem_tra_dap_an() {
@@ -85,6 +93,7 @@ function kiem_tra_dap_an() {
             play_wrong_audio();
         }
 
+        trang_thai = 1;
         show_btn_cau_tiep_theo();
     } else {
         alert("Vui lòng chọn đáp án");

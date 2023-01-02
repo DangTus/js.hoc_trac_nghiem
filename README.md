@@ -1,9 +1,11 @@
 # Web học trắc nghiệm
-- Mô tả dự án: Đây là web giúp bạn học trắc nghiệm
 
-- Cách sử dụng: Thay đổi bộ câu hỏi trong file json/bo_cau_hoi.json theo mẫu bên dưới rồi sau đó chạy web
+-   Mô tả dự án: Đây là web giúp bạn học trắc nghiệm
 
-- File bo_cau_hoi.json mẫu:
+-   Cách sử dụng: Thay đổi bộ câu hỏi trong file json/bo_cau_hoi.json theo mẫu bên dưới rồi sau đó chạy web
+
+-   File bo_cau_hoi.json mẫu:
+
 ```
 {
     "data": [
@@ -31,4 +33,4 @@
 }
 ```
 
-- Link web demo: https://dangtus.github.io/js.hoc_trac_nghiem/
+-   Link web demo: https://dangtus.github.io/js.hoc_trac_nghiem/
