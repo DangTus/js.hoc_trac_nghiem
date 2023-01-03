@@ -10,9 +10,8 @@ const abcd_html = document
 const abcd = ["A. ", "B. ", "C. ", "D. "];
 
 var dap_an_da_chon = null;
-var dap_an_dung = null;
 var bo_cau_hoi = null;
-var cau_hoi_hien_tai = -1;
+var cau_hoi_hien_tai = 0;
 
 //trang_thai = 0 là chưa ấn vào nút trả lời, trang_thai = 1 là đã ấn vào nút trả lời
 var trang_thai = 0;
@@ -40,15 +39,17 @@ function show_cau_hoi() {
     reset_css_item_dap_an();
     show_btn_tra_loi();
 
-    cau_hoi_hien_tai += 1;
+    //chuyển trạng thái về lúc chưa trả lời
     trang_thai = 0;
 
     //kiểm tra xem còn câu hỏi hay không, nếu không còn thì về trang chủ
     if (cau_hoi_hien_tai < bo_cau_hoi.length) {
-        //lấy nội câu hỏi, câu trả lời và đáp án
+        //lấy nội câu hỏi, câu trả lời
         cau_hoi = bo_cau_hoi[cau_hoi_hien_tai].cau_hoi;
         dap_an = bo_cau_hoi[cau_hoi_hien_tai].dap_an;
-        dap_an_dung = bo_cau_hoi[cau_hoi_hien_tai].dap_an_dung;
+
+        //xáo trộn đáp án
+        dap_an = shuffle(dap_an);
 
         //đổ câu hỏi và các câu trả lời ra web
         noi_dung_cau_hoi_html.innerHTML = cau_hoi;
@@ -81,6 +82,7 @@ function kiem_tra_dap_an() {
     if (dap_an_da_chon) {
         item_dap_an = document.getElementById("dap_an_" + dap_an_da_chon);
         noi_dung_dap_an = item_dap_an.getElementsByTagName("span")[0].innerText;
+        dap_an_dung = bo_cau_hoi[cau_hoi_hien_tai].dap_an_dung;
 
         if (noi_dung_dap_an == dap_an_dung) {
             item_dap_an.classList.add("item-right");
@@ -93,7 +95,10 @@ function kiem_tra_dap_an() {
             play_wrong_audio();
         }
 
+        //chuyển trạng thái thành đã ấn vào nút trả lời
         trang_thai = 1;
+
+        cau_hoi_hien_tai += 1;
         show_btn_cau_tiep_theo();
     } else {
         alert("Vui lòng chọn đáp án");
