@@ -1,0 +1,59 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "question": "Câu nào sau đây không là mệnh đề?",
+            "answers": {
+                "_1": "x > 2",
+                "_2": "3 < 1",
+                "_3": "4 – 5 = 1",
+                "_4": "Tam giác đều là tam giác có ba cạnh bằng nhau."
+            },
+            "correct_answer": "_1"
+        },
+        {
+            "id": 2,
+            "question": "Trong các câu sau, câu nào không phải là mệnh đề?",
+            "answers": {
+                "_5": "Buồn ngủ quá!",
+                "_6": "Hình thoi có hai đường chéo vuông góc với nhau.",
+                "_7": "8 là số chính phương.",
+                "_8": "Băng Cốc là thủ đô của Mianma."
+            },
+            "correct_answer": "_5"
+        },
+        {
+            "id": 3,
+            "question": "Trong các câu sau, câu nào là mệnh đề?",
+            "answers": {
+                "_9": "Đi ngủ đi!",
+                "_10": "Trung Quốc là nước đông dân nhất thế giới.",
+                "_11": "Bạn học trường nào?",
+                "_12": "Không được làm việc riêng trong giờ học."
+            },
+            "correct_answer": "_10"
+        },
+        {
+            "id": 4,
+            "question": "Trong các mệnh đề sau, mệnh đề nào là mệnh đề đúng?",
+            "answers": {
+                "_13": "Tổng của hai số tự nhiên là một số chẵn khi và chỉ khi cả hai số đều là số chẵn;",
+                "_14": "Tích của hai số tự nhiên là một số chẵn khi và chỉ khi cả hai số đều là số chẵn;",
+                "_15": "Tổng của hai số tự nhiên là một số lẻ khi và chỉ khi cả hai số đều là số lẻ;",
+                "_16": "Tích của hai số tự nhiên là một số lẻ khi và chỉ khi cả hai số đều là số lẻ."
+            },
+            "correct_answer": "_16"
+        },
+        {
+            "id": 5,
+            "question": "Số tập con của tập A = {1; 2; 3} là?",
+            "answers": {
+                "_17": "7",
+                "_18": "6",
+                "_19": "5",
+                "_20": "8"
+            },
+            "correct_answer": "_20"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+#cau_hoi,
+#dap_an {
+    text-align: justify;
+    font-size: 20px;
+}
+
+#dap_an {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#cau_hoi .item,
+#dap_an .item {
+    background-color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+    padding: 20px 15px;
+    cursor: default;
+}
+
+#dap_an .item {
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#dap_an .item:hover,
+.btn:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+    transition: all 0.2s ease-out;
+}
+
+.btn:hover {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#dap_an .item-select {
+    border: 2px solid var(--color-primary);
+}
+
+#dap_an .item-right {
+    border: 2px solid var(--color-correct);
+}
+
+#dap_an .item-wrong {
+    border: 2px solid var(--color-wrong);
+}
+
+.btn {
+    width: fit-content;
+    padding: 10px 30px;
+    margin-top: 50px;
+    background-color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+}

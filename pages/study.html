@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="../css/study.css" />
+
+<h2 class="text-center col-sm-12 text-uppercase fw-bold">học trắc nghiệm</h2>
+
+<div class="row justify-content-center mt-5">
+    <div id="cau_hoi" class="col-12 col-xl-8">
+        <div class="item">
+            <strong>Câu hỏi: </strong>
+            <span>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptatibus fuga odit modi quas
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div id="dap_an" class="col-12 col-xl-8">
+        <div class="item" onclick="click_dap_an(0)">
+            <strong>A. </strong>
+            <span>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptatibus fuga odit modi quas
+            </span>
+        </div>
+        <div class="item" onclick="click_dap_an(1)">
+            <strong>B. </strong>
+            <span>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptatibus fuga odit modi quas
+            </span>
+        </div>
+        <div class="item" onclick="click_dap_an(2)">
+            <strong>C. </strong>
+            <span>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptatibus fuga odit modi quas
+            </span>
+        </div>
+        <div class="item" onclick="click_dap_an(3)">
+            <strong>D. </strong>
+            <span>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptatibus fuga odit modi quas
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <button id="btn_tra_loi" class="btn" onclick="kiem_tra_dap_an()">
+        Trả lời
+    </button>
+    <button id="btn_cau_tiep_theo" class="btn hidden" onclick="show_cau_hoi()">
+        Câu hỏi tiếp theo
+    </button>
+</div>
+
+<div id="audio" class="hidden">
+    <audio id="audio_correct" src="../assets/mp3s/duolingo-correct.mp3"></audio>
+    <audio id="audio_wrong" src="../assets/mp3s/duolingo-wrong.mp3"></audio>
+</div>
+
+<script src="../js/study.js"></script>
